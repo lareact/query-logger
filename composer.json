@@ -1,0 +1,29 @@
+{
+    "name": "z-golly/query-logger",
+    "description": "query logger",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "jonathan",
+            "email": "zjonathan@aliyun.com"
+        }
+    ],
+    "require": {
+        "php": "^7.2｜^8.0",
+        "laravel/framework": "^7.0|^8.0"
+    },
+    "require-dev": {},
+    "autoload": {
+        "psr-4": {
+            "Golly\\QueryLogger\\": "src/"
+        }
+    },
+    "autoload-dev": {},
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Golly\\QueryLogger\\QueryServiceProvider"
+            ]
+        }
+    }
+}
