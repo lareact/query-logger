@@ -1,6 +1,6 @@
 {
     "name": "z-golly/query-logger",
-    "description": "query logger",
+    "description": "laravel query logger",
     "license": "MIT",
     "authors": [
         {
@@ -25,5 +25,10 @@
                 "Golly\\QueryLogger\\QueryServiceProvider"
             ]
         }
-    }
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
 }
