@@ -145,6 +145,11 @@ class QueryLogger
      */
     protected function getQueryInfo(QueryExecuted $query)
     {
+        foreach ($query->bindings as &$binding) {
+            if (is_string($binding)) {
+                $binding = "'{$binding}'";
+            }
+        }
         $sql = vsprintf(
             str_replace('?', '%s', $query->sql),
             $query->bindings
