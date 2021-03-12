@@ -6,7 +6,7 @@
 ## Installing
 
 ```shell
-$ composer require z-golly/query-logger -vvv
+$ composer require z-golly/query-logger --dev
 ```
 
 ## Usage
