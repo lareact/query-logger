@@ -117,12 +117,13 @@ class QueryLogger
      */
     protected function getArtisanInfo()
     {
-        $command = $this->app['request']->server('argv', []);
-        if (is_array($command)) {
-            $command = implode(' ', $command);
-        }
+        $command = (array)$this->app['request']->server('argv', []);
 
-        return '[CONSOLE] ' . $command;
+        return sprintf(
+            '[CONSOLE][%s] %s',
+            $this->time($this->queryTime),
+            implode(' ', $command)
+        );
     }
 
     /**
